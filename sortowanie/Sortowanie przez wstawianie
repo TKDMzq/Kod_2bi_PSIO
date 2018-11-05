@@ -18,16 +18,13 @@ int main()
     {
         pom = tab[i];
         k = i - 1;
-        if (k >= 0 && tab[k] > pom)
+        while (k >= 0 && tab[k] > pom)
         {
             tab[k + 1] = tab[k];
             k = k - 1;
         }
-        else
-        {
-            tab[k + 1] = pom;
-            i = i + 1;
-        }
+        tab[k + 1] = pom;
+        i = i + 1;
     }
     for (i = 0; i <= 9; i++)
     {
