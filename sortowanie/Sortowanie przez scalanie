@@ -63,7 +63,6 @@ void dziel (int tab[], int L, int P, int n)
     }
     scal(tab, L, P, n);
 }
-
 int main()
 {
     int n, i; // ilość elementów tablicy, licznik
