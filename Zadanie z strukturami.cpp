@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cstdio>
 
 using namespace std;
 
@@ -12,9 +11,10 @@ struct student
 
 int main()
 {
-    int i, d, r, suma = 0;
+    int i, d, r, suma = 0, g = 0;
+    float x = 0, p;
     student tab[3];
-    printf ("Podpunkt A:\n");
+    cout << "--------------------A----------------------" << endl;
     for (i = 0; i < 3; i++)
     {
         cout << "Podaj imie: ";
@@ -31,7 +31,7 @@ int main()
         cin >> tab[i].stypS;
         cout << endl;
     }
-    printf ("Podpunkt B:\n");
+    cout << "--------------------B----------------------" << endl;
     for (i = 0; i < 3; i++)
     {
         cout << tab[i].imie << " ";
@@ -42,7 +42,7 @@ int main()
         cout << tab[i].stypS << " ";
         cout << endl;
     }
-    printf ("Podpunkt C:\n");
+    cout << "--------------------C----------------------" << endl;
     cout << "Ktory rok studenta?" << endl;
     cin >> r;
     for (i = 0; i < 3; i++)
@@ -55,15 +55,46 @@ int main()
             cout << tab[i].stypN << " ";
         }
     }
-    printf ("Podpunkt D:\n");
+    cout << "--------------------D----------------------" << endl;
     for (i = 0; i < 3; i++)
     {
         if (tab[i].rok == 1)
         {
-           suma = suma + tab[i].stypS; 
+           suma = suma + tab[i].stypS;
         }
     }
     cout << "Suma stypendiow studentow I roku: " << suma;
-    printf ("Podpunkt E:\n");
+    cout << "--------------------E----------------------" << endl;
+    for (i = 0; i < 3; i++)
+    {
+        if(tab[i].stypN > x)
+        {
+            x = tab[i].stypN;
+        }
+    }
+    for (i = 0; i < 3; i++)
+    {
+        if(tab[i].stypN == x)
+        {
+            cout << "Nazwisko: " << tab[i].nazwisko << endl;
+        }
+    }
+    cout << "--------------------F----------------------" << endl;
+    p = tab[0].stypS;
+    for (i = 1; i < 3; i++)
+    {
+        if (p > tab[i].stypS)
+        {
+            p = tab[i].stypS;
+        }
+    }
+    for (i = 0; i < 3; i++)
+    {
+        if (tab[i].stypS == p)
+        {
+            g++;
+        }
+    }
+    cout << "Liczba uczniow z najnizszym stypendium wynosi: " << g << endl;
     return 0;
 }
