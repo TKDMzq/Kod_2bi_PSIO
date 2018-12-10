@@ -4,11 +4,11 @@ using namespace std;
 
 long long int silnia(int n)
 {
-    if(n == 0)
+    if (n == 0)
     {
         return 1;
     }
-    return (silnia( n - 1) * n);
+    return (silnia(n - 1) * n);
 }
 
 int main()
