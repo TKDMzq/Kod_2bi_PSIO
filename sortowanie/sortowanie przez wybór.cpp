@@ -32,7 +32,9 @@ int main()
     }
     cout<<endl;
     for (i = 0; i < n; i++)
+    {
         cout << tab[i] << " ";
+    }
     cout << endl;
     cout << a;
     cout << endl;
