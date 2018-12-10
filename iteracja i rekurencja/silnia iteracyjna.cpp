@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-   int n, a=1;
+   int n, a = 1;
    cout << "Podaj liczbe naturalna: ";
    cin >> n;
    cout << n << "! = ";
