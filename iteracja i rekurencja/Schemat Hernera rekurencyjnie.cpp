@@ -13,7 +13,6 @@ int horner (int n, int wsp[20], int x)
         return horner(n-1, wsp, x) * x + wsp[n-1];
     }
 }
-
 int main()
 {
     int x, n, wsp[20], i;
