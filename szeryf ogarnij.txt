@@ -1,0 +1,46 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main()
+{
+    int tab[20],*wsk, i, *wsk1, pat[20];
+    srand(time(NULL));
+    wsk=tab;
+    wsk1=pat;
+    for (int i=0;i<20;i++)
+    {
+        *wsk=rand()%8;
+        wsk=wsk+1;
+    }
+    for(i=0; i<20; i++)
+    {
+        *wsk1=rand()%8;
+        wsk1=wsk1+1;
+    }
+    wsk=tab;
+    wsk1=pat;
+    for(i=0;i<20;i++)
+    {
+        cout <<*wsk<<" ";
+        wsk=wsk+1;
+    }
+    cout<<endl;
+    for(i=0; i<20; i++)
+    {
+        cout<<*wsk1<<" ";
+        wsk1=wsk1+1;
+    }
+    cout<<endl;
+    wsk=tab;
+    wsk1=pat;
+    for(i=0; i<20; i++)
+    {
+        if(*wsk==*wsk1)
+            cout<<i<<" ";
+         wsk1=wsk1+1;
+         wsk=wsk+1;
+    }
+    return 0;
+}
