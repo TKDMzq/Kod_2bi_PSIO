@@ -1,0 +1,724 @@
+    cout <<"A"<< endl;
+    for (int i=20;i>=1;i--)
+    cout <<i<< ", ";
+
+   cout <<endl<<"B"<< endl;
+   for (int i=-10;i<=10;i++)
+   cout <<i<< ", ";
+
+   cout <<endl<<"C"<< endl;
+   for (int i=4;i<=50;i+=2)
+   cout <<i<< ", ";
+
+    cout <<endl<<"D"<< endl;
+    for (int i=50;i>=4;i-=2)
+    cout <<i<< ", ";
+
+    cout <<endl<<"E"<< endl;
+    for (int i=1;i<=1000;i*=3)
+    cout <<i<< ", ";
+
+   cout <<endl<<"F"<< endl;
+   for (int i=9000;i>=1;i/=4)
+   cout <<i<< ", ";
+   cout <<endl;
+
+
+
+
+A
+20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1,
+B
+-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+C
+4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50,
+D
+50, 48, 46, 44, 42, 40, 38, 36, 34, 32, 30, 28, 26, 24, 22, 20, 18, 16, 14, 12, 10, 8, 6, 4,
+E
+1, 3, 9, 27, 81, 243, 729,
+F
+9000, 2250, 562, 140, 35, 8, 2,
+
+Napisz program, który porówna dwie wczytane z klawiatury liczby
+ int a,b;
+cout<<"podaj a: ";
+    cin>>a;
+    cout<<"podaj b: ";
+    cin>>b;
+    if(a==b)
+        cout<<a<<"="<<b;
+    else if(a>b)
+        cout<<a<<">"<<b;
+    else
+        cout<<a<<"<"<<b;
+
+Napisz program, który sprawdzi czy wczytana z klawiatury liczba należy do przedziału <5,8>
+
+int c;
+cout <<endl;
+cout<<"podaj c ";
+cin>>c;
+if (c>=5&&c<=8)
+cout<<c<<" nalezy do przedzialu <5,8>"<<endl;
+else
+cout<<c<<" nie nalezy do przedzialu <5,8>"<<endl;
+
+
+Napisz program, który sprawdzi czy wczytana z klawiatury liczba należy do przedziału 
+
+int d;
+cout<<"podaj d ";
+cin>>d;
+if (d<10||d>20)
+cout<<d<<" nalezy do zadanego przedzialu "<<endl;
+else
+cout<<d<<" nie nalezy do zadanego przedzialu"<<endl;
+
+Napisz program, który wczyta trzy długości boków, następnie sprawdzi, czy da się z nich zbudować trójkąt. Jeśli tak, program napisze, czy jest to trójkąt równoboczny, równoramienny, czy różnoboczny.
+
+int a,b,c;
+cout<<"podaj a ";
+cin>>a;
+cout<<"podaj b ";
+cin>>b;
+cout<<"podaj c ";
+cin>>c;
+if ((a+b>c) && (a+c>b) && (b+c>a))
+    {
+    cout<<"mozna zbudowac trojkat"<<endl;
+    if ((a==b) && (b==c))
+    cout<<"trojkat jest rownoboczny"<<endl;
+   if ((a==b) || (b==c)||(c==a))
+    cout<<"trojkat jest rownoramienny,"<<endl;
+    else
+    cout<<"trojkat jest roznoboczny"<<endl;
+    }
+else
+cout<<"nie mozna zbudowac trojkata"<<endl;
+
+
+Napisz program, który za pomocą pętli wypisze liczby:  10, 9.5, 9, 8.5 …. 1
+
+
+
+   cout<<"----------wersja  while------------"<<endl;
+  
+  float ile = 10;
+    while( ile >=1 )
+    {
+        cout << ile << endl;
+        ile=ile-0.5;     //ile-=0.5
+    }
+
+   cout<<"----------wersja do … while-------"<<endl;
+
+ile = 10;
+    do
+    {
+        cout << ile << ", ";
+        ile=ile-0.5;
+    }
+ while( ile >=1 );
+
+
+
+
+
+
+
+
+
+
+
+
+Napisz program, który wypisze liczby podzielne przez 5 z zakresu od 0 do 50
+  
+
+
+ cout<<"----------wersja  while------------"<<endl;
+
+int i=0;   
+while (i<=50)     //(i<51)
+{
+    if(i%5==0)
+    {
+       cout<<i<<endl;
+    }
+    i++;
+}
+
+cout<<"----------wersja do … while------------"<<endl;
+
+i=0; 
+do
+{
+    if(i%5==0)
+    {
+       cout<<i<<endl;
+    }
+    i++;
+}
+while (i<51);     //(i<=50)
+
+
+
+
+Napisz program, który zapyta użytkownika "Czy jestes gotowy aby pojsc dalej? (wpisz T/N)". Jeśli użytkownik wpisze "T", program wyświetli "Poszedles dalej". Jeśli wpisze on inny znak, program znow zada pytanie.
+
+string a;
+    do
+{
+cout<<"Czy jestes gotowy aby pojsc dalej? (wpisz T/N)";
+cin>>a;
+}
+while(a!="T");
+cout<<"Poszedles dalej"<<endl;
+}
+
+Temat: Algorytm Euklidesa
+Największy Wspólny Dzielnik (NWD)
+Przedstaw w postaci schematu blokowego algorytm obliczania NWD
+Pobieramy dwie liczby naturalne, od większej z nich odejmujemy mniejszą, a następnie większą liczbę zastępujemy różnicą. Postępujemy tak do momentu, gdy dwie liczby będą równe (nie będą różne). Otrzymana liczba będzie NWD. Przykład : a =12 , b = 20, ponieważ b > a to b = 20–12=8 , teraz a > b czyli a=12–8 =4, dalej b>a czyli b= 8–4 = 4 i a = 4 stąd NWD = 4 
+Problem algorytmiczny : największy wspólny dzielnik dwóch liczb 
+Dane wejściowe : a,b ∈ N Dane wyjściowe : NWD (a,b)
+
+int a, b;
+    cout << "Podaj pierwsza liczbe: ";
+    cin >> a;
+    cout << "Podaj druga liczbe: ";
+    cin >> b;
+    while(a!=b)
+      {
+        if(a>b)
+        a=a-b;
+        else
+        b=b-a;
+    }
+      cout << "Najwiekszy wspolny dzielnik: " << a << endl;
+
+TEMAT: Definiowanie i wywoływanie funkcji. Przekazywanie parametrów do funkcji.
+Procedury i funkcje to wydzielone bloki kodu realizujące określone zadania. Funkcje od procedury odróżnia to, że ta pierwsza zwraca rezultat działania.
+
+
+Funkcja bez przekazywania zmiennych
+#include <iostream>
+float a,b;
+using namespace std;
+float dodawanie_ab()
+{
+cout<<"podaj a ";
+cin >> a;
+cout<<"podaj b ";
+cin >> b;
+return a + b;
+}
+int main()
+{
+cout << "wynik dodawania a+b wynosi "<< dodawanie_ab();
+return 0;
+}
+
+
+
+
+Funkcja z przekazywaniem zmiennych
+ 
+#include <iostream>
+float a,b;
+using namespace std;
+float dodawanie_ab(float c, float d)
+{
+return c + d;
+}
+int main()
+{
+cout<<"podaj a ";
+cin >> a;
+cout<<"podaj b ";
+cin >> b;
+cout << "wynik dodawania a+b: "<<dodawanie_ab(a,b);
+return 0;
+}
+
+Procedura bez przekazywania zmiennych
+#include <iostream>
+float a,b;
+using namespace std;
+void dodawanie_ab()
+{
+cout<<"podaj a ";
+cin >> a;
+cout<<"podaj b ";
+cin >> b;
+cout<<"wynik dodawania a+b "<<a+b;
+}
+int main()
+{
+dodawanie_ab();
+return 0;
+}
+Procedura z przekazywaniem zmiennych
+ #include <iostream>
+float a,b;
+using namespace std;
+void dodawanie_ab(float c, float d)
+{
+cout<<"wynik dodawania a+b "<<c+d;
+} 
+int main()
+{
+cout<<"podaj a ";
+cin >> a;
+cout<<"podaj b ";
+cin >> b;
+dodawanie_ab(a,b);
+return 0;
+}
+Używając funkcji lub procedury napisz program obliczający pole trójkąta
+#include <iostream>
+float a,h;
+using namespace std;
+void pole_trojkata(float c, float d)
+{
+	cout<<"pole trojkata wynosi "<<c*d*0.5;  
+}
+int main()
+{
+cout<<"podaj a ";
+cin >>a;
+cout<<"podaj h ";
+cin >>h;
+pole_trojkata(a,h);
+return 0;
+}
+
+
+Program przeliczający jednostki
+#include <iostream>
+using namespace std;
+float metry;
+float ile_cali(float m)
+{
+  return m*39.37;
+}
+float ile_jardow(float x);
+void ile_mil(float m)
+{
+  cout<<"na mile: "<<m*0.0006213;
+}
+int main()
+{
+   cout << "Podaj ile metrow: ";
+   cin>>metry;
+   cout<<"na cale: "<<ile_cali(metry)<<endl;
+   cout<<"na jardy: "<<ile_jardow(metry)<<endl;
+   ile_mil(metry);
+   return 0;
+}
+float ile_jardow(float x)
+{
+  return x*1.0936;
+}
+
+
+TEMAT: Tworzenie programu sprawdzającego, czy liczba jest doskonała
+ 
+Osoby, które mają ten schemat blokowy z poprzedniego półrocza, nie muszą go przepisywać
+
+
+#include <iostream>
+using namespace std;
+int d=2, wyn=1, n;
+int main()
+{
+cout<<"Podaj liczbe";
+cin>>n;
+while(d<=n/2)
+{
+if(n%d==0)
+wyn=wyn+d;
+d++;
+}
+if(n==wyn)
+cout<<"liczba jest doskonala";
+else
+cout<<"liczba nie jest doskonala";
+}
+
+
+
+
+
+TEMAT: Tworzenie programu sprawdzającego, czy liczba jest pierwsza
+
+#include <iostream>
+using namespace std;
+int main()
+{                      
+ int i=2,n;
+ cout<<"podaj liczbe: ";
+ cin>>n;
+ while (i<n)
+ {
+     if (n%i==0)
+     {
+         cout<<"liczba nie jest pierwsza ";
+         return 0;
+ 	}
+ 	else
+      i=i+1;
+ }
+ cout<<"liczba jest pierwsza ";
+	return 0;
+}
+
+
+
+TEMAT: Tworzenie programu rozkładającego liczbę na czynniki pierwsze
+
+#include <iostream>
+using namespace std;
+int main()
+{
+	int n, i=2;
+	cout<<"Podaj liczbe";
+	cin>>n;
+	while (n!=1)
+	{
+	while (n%i==0)
+	{
+    	cout<< i << " * ";
+    	n=n/i;
+	}
+	i++;
+	}
+	return 0;
+}
+
+
+
+TEMAT: Implementacja programu wykorzystującego zastosowanie tablicy.
+
+numerowanie tablic w C++ zaczyna się zawsze od zera
+int tab[5] = {1, 3, 90, 100000, 9}; // delkaracja tablicy 5 elementowej przechowującej liczby całkowite 1,3,90,100000,9
+int tab2[5] = {1, 3}; //w pierwszej komórce przechowywana jest liczba 1, w drugiej 3
+Powyższy zapis jest równoważny z zapisem:
+int tab2[5] = {1, 3, 0, 0, 0};
+int tab3[0] = 34; //przypisanie do pierwszej komórki wartość 34
+int  tab3[3]=10; //przypisanie do czwartej komórki wartość 10
+
+W poniższych programach użyj pętli, nie wypisuj na piechotę.
+Napisz program, który z tablicy tab[5]={1,4,7,8,9} wypisze elementy parzyste.
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+int main()
+{
+int tab[5] = {1,4,7,8,9};
+for(int i=0;i<5;i++)
+{
+if(tab[i]%2==0)
+cout<<tab[i]<<",";
+}
+return 0;
+}
+
+
+
+Napisz program, który wczyta z klawiatury do tablicy 6-elementowej liczby, następnie je wyświetli po przecinku, a następnie wyświetli te liczby w odwrotnej kolejności
+#include <iostream>
+using namespace std;
+int main ()
+{
+int tab[6], i;
+for (i = 0; i <= 5; i++)
+{
+cout << "Liczba nr " << i << ": ";
+cin  >> tab[i];
+}
+for (i = 0; i <= 5; i++)
+cout << tab[i] << ",";
+cout<<endl;
+for (i = 5; i >= 0; i--)
+cout << tab[i] << ",";
+return 0;
+}
+
+
+Napisz program, który wczyta z klawiatury do tablicy 6 liter, następnie wyświetli je po przecinku, a następnie wyświetli te litery w odwrotnej kolejności
+#include <iostream>
+using namespace std;
+int main()
+{
+string napis;
+int i;
+for (i=0;i<6;i++)
+{
+cout<<"Podaj litere nr "<<i<<": ";
+cin>>napis[i];
+}
+for (i=0;i<6;i++)
+{
+cout<<napis[i]<<",";
+}
+cout<<endl;
+for (i=5;i>=0;i--)
+{
+cout<<napis[i]<<",";
+}
+return 0;
+}
+
+Napisz program, który wczyta z klawiatury zdanie zawierające spacje, wyświetli go, następnie wyświetli znaki w nim zawarte w odwrotnej kolejności (nie oddzielone przecinkami).
+#include <iostream>
+using namespace std;
+ int main ()
+{
+string napis;
+getline( cin, napis);
+cout <<napis;
+cout<<endl;
+  for (int i=napis.length()-1; i >= 0; i--)
+	cout << napis[i];
+   return 0;
+}
+
+
+
+
+
+CIĄG FIBONACCIEGO
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+long double fib[100000]; int n;
+int main()
+{
+	cout << "Ile liczb Fibonacciego mam wyznaczyc: ";
+	cin>>n;
+
+	fib[0]=1;
+	fib[1]=1;
+
+	for (int i=2; i<n; i++)
+	{
+    	fib[i] = fib[i-1] + fib[i-2];
+	}
+
+cout<<setprecision(10000);
+cout<<endl<<"wyraz nr "<<n<<":"<<fib[n-1];
+	return 0;
+}
+
+
+ŚREDNIA
+
+#include <iostream>
+using namespace std;
+float oceny[5]; float suma=0, srednia;
+
+int main()
+{
+	for(int i=0; i<5; i++)
+	{
+    	cout<<endl<<"Podaj "<<i+1<<" ocene: ";
+    	cin>>oceny[i];
+    	suma += oceny[i]; 
+	}
+
+	srednia = suma / 5;
+	cout<<endl<<"srednia = "<<srednia;
+
+	return 0;
+}
+
+Napisz program, który wczyta z klawiatury zdanie zawierające spacje, a następnie dopisze automatycznie na końcu słowo “programowanie”. Użyj instrukcji insert.
+
+#include <iostream>
+using namespace std;
+int main()
+{
+string zdanie;
+cout<<"Napisz zdanie: ";
+getline(cin,zdanie);
+zdanie.insert(zdanie.length()," programowanie");
+cout<<zdanie;
+return 0;
+}
+
+
+TEMAT: Pliki tekstowe. Zapis i odczyt z pliku
+
+Napisz program, który pobierze zdanie  z klawiatury i zapisze je do pliku. Każde kolejne uruchomienie programu ma dopisywać nowe zdanie pod poprzednim.
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+int main ()
+{
+string napis;
+fstream plik;
+plik.open("zapis.txt", ios::out| ios::app);
+if(plik.good()==false)
+cout<<"Nie mozna otworzyc pliku!";
+getline(cin, napis);
+plik << napis<<endl;
+plik.close();
+return 0;
+}
+
+
+Napisz program, który wczyta zdanie  z klawiatury i zapisze je od tyłu do pliku . Każde kolejne uruchomienie programu ma dopisywać nowe zdanie pod poprzednim.
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+ int main ()
+{
+string napis;
+fstream plik;
+plik.open("zapis.txt", ios::out | ios::app);
+if(plik.good()==false)
+cout<<"Nie mozna otworzyc pliku!";
+getline( cin, napis);
+for (int i=napis.length()-1; i >= 0; i--)
+plik << napis[i];
+plik<<endl;
+plik.close();
+return 0;
+}
+
+
+Napisz program, który wczyta z pliku kilka zdań oddzielonych enterem i wyświetli je na ekranie.
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+int main ()
+{
+string napis;
+fstream plik;
+plik.open("odczyt.txt", ios::in);
+if(plik.good()==false) cout<<"Nie mozna otworzyc pliku!";
+while(!plik.eof())
+{
+getline(plik, napis);
+cout << napis<<endl;
+}
+plik.close();
+return 0;
+}
+
+
+Napisz program, który wczyta z pliku kilka zdań oddzielonych enterem i wyświetli je na ekranie zapisane od tyłu.
+
+ 
+#include <iostream>
+#include <fstream>
+using namespace std;
+ int main ()
+{
+string napis;
+fstream plik;
+plik.open("odczyt.txt", ios::in);
+if(plik.good()==false) cout<<"Nie mozna otworzyc pliku!";
+while(!plik.eof())
+{
+getline(plik, napis);
+for (int i=napis.length()-1; i >= 0; i--)
+cout << napis[i];
+cout<<endl;
+}
+plik.close();
+return 0;
+}
+
+
+Napisz program, który wczyta z pliku kilka zdań oddzielonych enterem i zapisze je od tyłu do drugiego pliku. Kolejne uruchomienia programu mają nadpisywać poprzednio zapisane zdania.
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+int main ()
+{
+string napis;
+fstream plik1, plik2;
+plik1.open("odczyt.txt", ios::in);
+if(plik1.good()==false) cout<<"Nie mozna otworzyc pliku1!";
+plik2.open("zapis.txt", ios::out);
+if(plik2.good()==false) cout<<"Nie mozna otworzyc pliku2!";
+while(!plik1.eof())
+{
+getline(plik1, napis);
+for (int i=napis.length()-1; i >= 0; i--)
+plik2 << napis[i];
+plik2<<endl;
+}
+plik1.close();
+plik2.close();
+return 0;
+}
+
+
+Napisz program, który wczyta z pliku kilka liczb oddzielonych enterem i zapisze sześciany tych liczb do drugiego pliku. Kolejne uruchomienia programu mają nadpisywać poprzednio zapisane zdania. 
+
+konwersja zmiennej napisowej (string linia) na zmienną całkowitą (int liczba) 
+liczba=atoi(linia.c_str())
+
+konwersja zmiennej napisowej (string linia) na zmienną zmiennoprzecinkową (float liczba) 
+liczba=atof(linia.c_str())
+
+Należy dołożyć bibliotekę #include<cstdlib>
+
+
+#include <iostream>
+#include <fstream>
+#include <cstdlib>
+#include <cmath>
+using namespace std;
+int main ()
+{
+string linia;
+int liczba;
+fstream plik1, plik2;
+plik1.open("odczyt.txt", ios::in);
+if(plik1.good()==false) cout<<"Nie mozna otworzyc pliku1!";
+plik2.open("zapis.txt", ios::out);
+if(plik2.good()==false) cout<<"Nie mozna otworzyc pliku2!";
+while(!plik1.eof())
+{
+getline(plik1, linia);
+liczba=atoi(linia.c_str());
+plik2 <<pow(liczba,3)<<endl;
+}
+plik1.close();
+plik2.close();
+return 0;
+}
+
+
+
+Wersja poprzedniego programu bez konwertowania napisu na liczbę
+
+#include <iostream>
+#include <fstream>
+#include <cmath>
+using namespace std;
+int main ()
+{
+int liczba;
+fstream plik1, plik2;
+plik1.open("odczyt.txt", ios::in);
+if(plik1.good()==false) cout<<"Nie mozna otworzyc pliku1!";
+plik2.open("zapis.txt", ios::out);
+if(plik2.good()==false) cout<<"Nie mozna otworzyc pliku2!";
+while(!plik1.eof())
+{
+plik1>>liczba;
+plik2 <<pow(liczba,3)<<endl;
+}
+plik1.close();
+plik2.close();
+return 0;
+}
