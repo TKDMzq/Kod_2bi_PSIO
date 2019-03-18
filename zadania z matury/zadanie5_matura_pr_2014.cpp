@@ -38,7 +38,6 @@ int main()
     string tab[1000];
     string tablica[100];
     int licznik = 0, licznik2 = 0;
-    zapis << "B: " << endl;
     for (i = 0; i < 1000; i++)
     {
         plik >> x;
@@ -55,11 +54,16 @@ int main()
         }
         if (druga(x, d) == 1)
         {
-             tab[licznik2] = x;
+             tablica[licznik2] = x;
              licznik2++;
         }
     }
     zapis << "A: " << licznik << endl;
+    zapis << "B:" << endl;
+    for (i = 0; i < licznik2; i++) 
+        {
+       	zapis << tablica[i] << endl;
+        } 
     zapis << "C: " << endl;
     for (i = 0; i < 1000; i++)
     {
