@@ -1,8 +1,9 @@
 #include <iostream>
 #include <fstream>
+
 using namespace std;
 
-bool pierwsza(int a)
+bool pierwsza (int a)
 {
     for (int i = 2; i <= a / 2; i++)
     {
@@ -14,7 +15,7 @@ bool pierwsza(int a)
     return true;
 }
 
-bool druga(string b, int d)
+bool druga (string b, int d)
 {
     int i;
     for (i = 0; i < d - 1; i++)
@@ -62,8 +63,8 @@ int main()
     zapis << "B:" << endl;
     for (i = 0; i < licznik2; i++) 
         {
-       	zapis << tablica[i] << endl;
-        } 
+       	    zapis << tablica[i] << endl;
+        }
     zapis << "C: " << endl;
     for (i = 0; i < 1000; i++)
     {
