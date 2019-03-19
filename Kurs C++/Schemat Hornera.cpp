@@ -2,12 +2,12 @@
 
 using namespace std;
 
-int zamiana (string liczba)
+int zamiana (string liczba, int system)
 {
 	int wynik = liczba[0] - '0', i;
 	for (i = 1; i < liczba.size(); i++)
 	{
-		wynik = wynik * 2;
+		wynik = wynik * system;
 		wynik = wynik + liczba[i] - '0';
 	}
 	return wynik;
@@ -16,8 +16,11 @@ int zamiana (string liczba)
 int main ()
 {
 	string liczba;
-	cout << "Podaj liczbe binarna: ";
+	int system;
+	cout << "Podaj system liczby: ";
+	cin >> system;
+	cout << "Podaj liczbe systemu " << system << ":";
 	cin >> liczba;
-	cout << "Liczba dziesietna: " << zamiana(liczba);
+	cout << "Liczba " << system << ": " << zamiana(liczba, system);
 	return 0;
 }
