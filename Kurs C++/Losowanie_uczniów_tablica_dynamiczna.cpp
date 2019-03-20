@@ -9,7 +9,7 @@ int main ()
 {
 	fstream plik;
 	string trash;
-	int liczniklin = 0, j = 0;
+	int liczniklin = 0, licznik = 0;
 	srand(time(NULL));
 	plik.open("Uczniowie.txt", ios::in);
 	while (plik >> trash)
@@ -21,10 +21,10 @@ int main ()
 	cout << liczniklin << endl;
 	plik.open("Uczniowie.txt", ios::in);
 	string * klasa = new string[liczniklin];
-	for (j = 0; j < liczniklin; j++)
+	for (licznik = 0; licznik < liczniklin; licznik++)
 	{
-		getline (plik, klasa[j]);
-		cout << klasa[j] << endl;
+		getline (plik, klasa[licznik]);
+		cout << klasa[licznik] << endl;
 	}
 	cout << "Wylosowany uczen to: " << klasa[rand () % liczniklin];
 	delete [] klasa;
