@@ -20,15 +20,7 @@ int main ()
 		plik2 << g;
 		if (i == klucz.length())
 		{
-			if (!plik.eof() == true)
-			{
-				break;
-			}
-			else
-			{
-				i = 0;
-			}	
-				
+			i = 0;	
 		}
 		else
 		{
