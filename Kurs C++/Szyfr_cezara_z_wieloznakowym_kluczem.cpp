@@ -18,7 +18,7 @@ int main ()
 	{
 		g += klucz[i];
 		plik2 << g;
-		if (i == klucz.length())
+		if (i >= klucz.length())
 		{
 			i = 0;	
 		}
