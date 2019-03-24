@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-    int *p, tab[10], i. licznik;
+    int *p, tab[10], i, licznik = 0;
     p = tab;
     srand(time(NULL));
     for (i = 0; i < 10; i++)
@@ -19,7 +19,7 @@ int main()
     {
         if (*p % 3 == 0)
         {
-            liczik++;
+            licznik++;
         }
         p = p + 1;
     }
