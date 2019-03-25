@@ -36,7 +36,7 @@ int main ()
 {
 	ulamek u1 (3,4), u2 (3,5);
 	ulamek u = u1 * u2;
-	cout << u << endl; // u1.operator*(u2);
+	cout << u << endl;
 	ulamek u = u1 / u2;
 	cout << u;
 	return 0;
