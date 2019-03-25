@@ -37,7 +37,7 @@ public:
 
     ulamek operator+(ulamek prawy)
     {
-        //!  a/b + c/d  = ((a * d) + (c * b)) / (b *if (a == 0) 
+        //!  a/b + c/d  = ((a * d) + (c * b)) / (b * d)
         return skroc (ulamek (  ((licznik * prawy.mianownik) + (prawy.licznik * mianownik)),
         //!   skracam                                            //! ^ licznik
                         (mianownik * prawy.mianownik) ));
