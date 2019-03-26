@@ -13,7 +13,6 @@ class ulamek
             mianownik = mian;
             licznik = licz;
         }
-    
         int nwd (int a, int b)
         {
             if (a == 0) 
